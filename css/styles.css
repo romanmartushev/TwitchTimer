@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'XPLOR Bold';
+    src: url("../fonts/XPLOR Bold/XPLOR Bold-Regular.otf");
+}
+
+#app {
+    font-family: 'XPLOR Bold';
+}
+
+.slidedown-enter-active,
+.slidedown-leave-active {
+    transition: max-height 300s linear;
+}
+
+.slidedown-enter-to,
+.slidedown-leave-from {
+    max-height: 100%;
+}
+
+.slidedown-enter-from,
+.slidedown-leave-to {
+    max-height: 0;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitch Timer</title>
+    <script src="./js/vendor/tailwind.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/vendor/vue.js"></script>
+    <script src="./js/vendor/tmi.min.js"></script>
+    <script src="./env.js"></script>
+  </head>
+  <body class="h-screen w-screen uppercase">
+    <div id="app" class="h-screen w-screen">
+      <transition
+        :key="restart"
+        name="slidedown"
+        appear
+        @after-enter="finished()"
+      >
+        <div class="h-screen w-screen flex flex-col text-white justify-end text-9xl overflow-hidden">
+          <p v-text="text" class="pb-3 pl-3"></p>
+        </div>
+      </transition>
+    </div>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
